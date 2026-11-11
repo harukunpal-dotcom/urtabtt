@@ -1,33 +1,37 @@
-# urtabtt
+# urtabtt — お化け屋敷MOD
 
-Minecraft 26.3 / Fabric mod development project.
+Minecraft 26.3 / Fabric / Java 25 向けのお化け屋敷追加MODです。
 
-## Development environment
+## v1.0 の開発目標
+
+- 探索中に自然生成されるお化け屋敷
+- 専用アイテム「お化け屋敷の招待状」で任意の場所に出現させるお化け屋敷
+- 屋敷内などに出現し、プレイヤーを追いかける幽霊モンスター
+
+詳しい仕様と実装順序は [docs/HAUNTED_HOUSE_MOD_PLAN.md](docs/HAUNTED_HOUSE_MOD_PLAN.md) を参照してください。
+
+## 開発環境
 
 - Minecraft: 26.3
 - Mod loader: Fabric
 - Java: 25
-- Fabric Loom: 1.19.4
-- Gradle Wrapper: 9.8.2
+- ローカルのテンプレートで確認した Fabric Loom: 1.19.4
+- ローカルの Gradle Wrapper: 9.8.2
 
-## Build
+## ビルド
 
-From the project root, run:
+プロジェクト一式を取得した後、プロジェクトのルートで実行します。
 
 ```bash
 ./gradlew build
 ```
 
-The mod JAR is generated in `build/libs/`.
+生成物は `build/libs/` に出力されます。Minecraft の `mods` フォルダーには通常のMOD JARを入れてください（`-sources.jar` は入れません）。
 
-## Install
+## 現在の状態
 
-Copy the regular mod JAR (not the `-sources.jar`) into the `mods` folder of a Minecraft 26.3 Fabric installation.
+GitHub上では初期の README と初期化クラスに加えて、お化け屋敷MODの仕様書を追加しました。
+ただし、現在のGitHubリポジトリにはビルド設定・Gradle Wrapper・Fabricメタデータなどのプロジェクト一式が揃っていません。
+そのため、GitHub上のコードはまだビルド可能な完成状態ではなく、幽霊や屋敷のゲーム内実装もこれからです。
 
-## Project status
-
-The development environment has been built successfully and the template mod has been detected by Minecraft. Gameplay features are intentionally undecided for now.
-
-## License
-
-See [LICENSE](LICENSE) if a license file is added to this repository.
+まず、ローカルでビルド成功した Minecraft 26.3 Fabric テンプレート一式をリポジトリに揃え、その後に小さな単位で機能を実装します。
